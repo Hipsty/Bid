@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body{
+    background-color: #141526;
+    height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+#register_form,#login_form{
+    display:grid;
+    
+    
+}
+
+#register_form button ,#login_form button,#add_bidoo_btn, #add_bidoo_account_form button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-image: linear-gradient(-90deg,#1FA4E9,#2DE4D1);
+    border-image-slice: 1;
+    height: 40px;   
+}
+
+#add_bidoo_btn{
+    width: 60%;
+}
+
+#login_form button{
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg,#1FA4E9,#2DE4D1);
+    border-image-slice: 1;
+    margin-top: 9.5%;
+}
+
+#register_form button:hover ,#login_form button:hover, #add_bidoo_account_form button:hover{
+    cursor: pointer;
+    background-color: #141f2c;
+}
+
+#login_form input, #register_form input,#username_form input,#cookie_form input{
+    background-color: #4a525aff;
+    border-color: transparent;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid #3e78b2ff;
+    color: white;
+    font-family: 'Montserrat';
+    
+}
+
+#login_form label, #register_form label,#username_form label,#cookie_form label{
+    padding-bottom: 3%;
+}
+
+#login_form input:focus, #register_form input:focus,#username_form input:focus,#cookie_form input:focus{
+   outline: none;
+}
+
+#warning_box{
+    margin:auto; 
+    width: 35%;
+    height: 60px;
+    background-color: rgba(231, 137, 147, 1);
+    margin-top: 3%;
+    border-radius: 7px;
+    border: 1px solid rgba(218, 0, 22, 1);
+    display: none;
+    align-items:center;
+    justify-content:center;
+    margin-bottom: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#warning_box p{
+    margin-left: auto;
+    
+}
+
+label,h1,p,button,h2,h3,h5,a{
+    color: white;
+    font-family: 'Montserrat';
+    
+}
+
+#splitter{
+    background-color: white;
+    display: inline-block;
+    height: 150px;
+    width: 7px;
+    border-radius: 3px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#forms_container{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+#close_warning, .close_popup{
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+#close_warning:hover,.close_popup:hover{
+    cursor: pointer;
+}
+
+#subscribe_wiki_btn{
+    border-radius: 15px;
+    background-image: linear-gradient(-90deg,#1FA4E9,#2DE4D1);
+    height: 40px;
+    width: 85%;
+    margin-right:10%;
+    border: transparent;
+}
+
+#subscribe_wiki_btn:hover{
+    cursor: pointer;
+}
+
+#acnt_button:hover,#add_bidoo_btn:hover{
+    cursor: pointer;
+}
+
+#act_popup,#bidoo_popup,#loading_screen,#cookie_background,#subscription_popup, #payment_background,#faq_popup{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.55);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+#payment_background{
+    display: none;
+    backdrop-filter: none;
+    cursor: grabbing;
+}
+
+#popup_container{
+    background-color: #141526;
+    height: 86%;
+    width: 33%;
+    border-radius: 18px;
+    padding: 1%;
+}
+
+#left_bar{
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 96%;
+    width: 26%;
+    background-color: #24272bff;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#bidoo_method_switcher button{
+    width: 20%;
+    background-color: #141f2c;
+    border: none;
+    height: 40%;
+    border: 3px solid #141f2c;
+}
+
+#bidoo_method_switcher button:hover{
+    background-color: #24272bff;
+    cursor: pointer;
+}
+
+#bidoo_method_switcher button:nth-child(1){
+    border-radius: 10px 0px 0px 10px;
+    background-color: #24272bff;
+}
+
+#bidoo_method_switcher button:nth-child(2){
+    border-radius: 0px 10px 10px 0px;
+}
+
+#add_bidoo_account_form{
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#add_bidoo_account_form div{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bidoo_list_element{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    
+}
+
+.over_hand:hover{
+    cursor: pointer;
+}
+
+#redeem_center{
+    
+    display:flex;
+    justify-content: center;
+    width: 74%; 
+    align-items: center;
+   
+}
+
+#redeem_button{
+    height: 55%;
+    aspect-ratio : 1 / 1;
+    border:3px solid transparent;
+    color:white;
+    border-radius: 50%;
+    background-color: transparent;
+    background: linear-gradient(#141526, #141526) padding-box,
+              linear-gradient(45deg, #1FA4E9, #2DE4D1) border-box;
+    transition: all 0.3s ease-in-out;
+    animation: redeem_effect 3s infinite ease-in;
+    opacity: 0%;
+    
+}
+
+
+#redeem_button:hover{
+    cursor: pointer;
+    background: linear-gradient(#141f2c, #141f2c) padding-box,
+    linear-gradient(45deg, #1FA4E9, #2DE4D1) border-box;
+
+}
+
+@keyframes redeem_effect{
+    0%{height: 55%;} 
+    15%{height: 55%;opacity: 100%;} 
+    100%{height: 65%;opacity: 0%;}
+}
+
+#header{
+    height: 8%;
+}
+#logout_button{
+    background-color: transparent;
+    border:none;
+    border: 2px solid red;
+    width: 40%;
+    height: 7%;
+    border-radius: 25px;
+    align-items: center;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+}
+
+#logout_button:hover{
+    cursor: pointer; 
+}
+
+
+
+#logout_img_circle{
+    background-color: red;
+    border-radius: 50%;
+    height: 84%;
+    aspect-ratio: 1/1;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    pointer-events:none;
+}
+
+.subscription_info_popup{
+    transition: 0.4s ease-in-out;
+}
+
+.subscription_info_popup:hover{
+    transform: translateY(-5%);
+}
+
+#notification_centre{
+    position: absolute;
+    height:7%;
+    aspect-ratio: 1/1;
+    background-color: #24272bff;
+    border-radius: 25px;
+    bottom: 0;
+    right: 0;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s ease;
+    z-index: 0;
+}
+
+#notification_centre:hover img{
+    visibility: hidden;
+}
+
+#notification_centre:hover{
+    height: 50%;
+    aspect-ratio: 5/8;
+    transform-origin: bottom right;
+    display: block;
+}
+
+#notify_icon{
+    visibility: visible;
+}
+
+.pay_button{
+    border-radius: 15px;
+    background-color: transparent;
+    border: 3px solid #9093A8;
+    height: 40px;
+    width: 85%;
+    transition: 0.5s ease-in-out;
+}
+
+.pay_button:hover{
+    border-color: white;
+    cursor: pointer;
+}
+
+#div_checkout{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    width: 33%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#faq_button:hover{
+    cursor: pointer;
+}
+
+#page_content{
+    display: flex;
+}
+
+#header div:first-child{
+    width: 90%;
+}
+
+#header div:nth-child(2){
+    width: 10%;
+}
+
+#subscription_parent{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscription_info_popup{
+    background-color: #141526;
+    height: 70%;
+    width: 20%;
+    border-radius: 18px;
+    padding: 1%;
+}
+
+#tandc{
+    font-size:8px;
+    position:absolute;
+    bottom:0;
+    margin-left:32.6%;
+    margin-bottom:17%;
+    text-align:center;
+}
+
+#cookie-banner {
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #141526;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#accept-cookies {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+#accept-cookies:hover {
+    background-color: #45a049;
+}
+
+.trustpilot-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 6%;
+    width: 17%;
+    height: 6.5%;
+    margin-bottom: 1%;
+    z-index: 0;
+}
+
+@media (max-width:768px){
+    #popup_container{
+        width: 80%;
+    }
+    #warning_box{
+        width: 80%;
+    }
+    #welcome_text{
+        font-size: 12px;
+    }
+    #left_bar{
+        height: 46%;
+        width: 98%;
+        margin-right: 1%;
+    }
+    #header{
+        height: 7%;
+    }
+    #page_content{
+        display: block;
+    }
+    #redeem_button{
+        height: 55%;
+    }
+    @keyframes redeem_effect{
+    0%{height: 55%;} 
+    15%{height: 55%;opacity: 100%;} 
+    100%{height: 65%;opacity: 0%;}
+    }
+    #redeem_center{
+        width: 100%;
+        height: 46%;
+    }
+    #redeem_img{
+        width: 25%;
+    }
+    #add_bidoo_btn{
+        margin-bottom: 6%;
+    }
+    #subscribe_wiki_btn{
+        width: 250%;
+    }
+    #header div:first-child{
+        width: 65%;
+    }
+    #header div:nth-child(2){
+        width: 35%;
+    }
+    #subscription_parent{
+        display: block;
+        overflow-y: auto;
+    }
+    .subscription_info_popup{
+        width: 80%;
+        margin-top: 3%;
+        margin-left: 10%;        
+    }
+    #subscription_parent div:nth-child(4){
+        margin-bottom:3%;
+    }
+    .subscription_info_popup:hover{
+        transform: translateY(0%);
+    }
+    #div_checkout{
+        top: 0;
+        width: 100%;
+        height: 80%;
+        border-radius: 0px 0px 15px 15px;
+    }
+    #tandc{
+    font-size:8px;
+    position:absolute;
+    bottom:0;
+    margin-left:2%;
+    margin-bottom:50%;
+    text-align:center;
+    }
+
+    #cookie-banner{
+        width: 80%;
+    }
+
+    .trustpilot-container{
+        display: none;
+    }
+}
